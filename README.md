@@ -1,6 +1,6 @@
 # Browse/Search Surf Videos
 
-you can use whatever frameworks you’d like. we use React here at drift and have found create-react-app to be a great way to get started
+you can use whatever frameworks you’d like. we use React here at drift and have found create-react-app to be a great way to get started. To get started just fork this repo and get hacking, try to commit often, the goal of this exercise is to see your thought process during development.
 
 docs: ```https://developers.google.com/youtube/v3/getting-started```
 
