@@ -1,6 +1,6 @@
 # Browse/Search Surf Videos
 
-docs: ```https://developers.google.com/youtube/v3/getting-started```
+docs: https://developers.google.com/youtube/v3/getting-started
 
 apikey: ```AIzaSyBeimXtjgzfQcogY-fP8_CHPybmLpFaieo (or generate your own in the google api console)```
 
