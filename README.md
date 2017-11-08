@@ -20,3 +20,4 @@ https://www.googleapis.com/youtube/v3/search?key=AIzaSyBeimXtjgzfQcogY-fP8_CHPyb
   - show videos from same author on detail page
   - allow for sorting and advanced filtering on home page
   - make it sexy
+  - go crazy with available end points :)
