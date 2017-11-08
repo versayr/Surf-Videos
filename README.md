@@ -1,6 +1,8 @@
 # Browse/Search Surf Videos
 
-docs: https://developers.google.com/youtube/v3/getting-started
+you can use whatever frameworks you’d like. we use React here at drift and have found create-react-app to be a great way to get started
+
+docs: ```https://developers.google.com/youtube/v3/getting-started```
 
 apikey: ```AIzaSyBeimXtjgzfQcogY-fP8_CHPybmLpFaieo (or generate your own in the google api console)```
 
@@ -21,3 +23,4 @@ https://www.googleapis.com/youtube/v3/search?key=AIzaSyBeimXtjgzfQcogY-fP8_CHPyb
   - allow for sorting and advanced filtering on home page
   - make it sexy
   - go crazy with available end points :)
+  
