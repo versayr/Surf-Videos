@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class VideoCard extends Component {
-  render() {
-    return (
-      <div className="video-card"></div>
-    );
-  }
-}
+const VideoCard = ({video}) => {
+  const imageUrl = video.snippet.thumbnails.default.url;
+  return (
+    <li className="video-card">
+      <h2>{video.snippet.title}</h2>
+      <img src={imageUrl} alt="" />
+      <span>{video.snippet.description}</span>
+    </li>
+  );
+};
 
 export default VideoCard;

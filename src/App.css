@@ -9,14 +9,11 @@
   margin: 5px;
 }
 
-.search-results {
-  border: 1px solid black;
-  width: 700px;
-  margin: 5px;
+.video-card {
+  display: flex;
+  flex-direction: column;
 }
 
-.video-card {
-  border: 1px solid black;
-  height: 60px;
-  margin: 5px;
+.video-card img {
+  max-width: 64px;
 }

@@ -15,11 +15,12 @@ class App extends Component {
       videos: []
     };
     this.search = this.search.bind(this);
+    this.search('');
   }
 
   search(searchTerm) {
     console.log(searchTerm);
-    YTSearch({key: API_KEY, term: searchTerm}, (videos) => {
+    YTSearch({key: API_KEY, term: `surf ${searchTerm}`}, (videos) => {
       this.setState({
         videos: videos
       });
