@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import YTSearch from 'youtube-api-search';
+import React, { Component }             from 'react';
+import YTSearch                         from 'youtube-api-search';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
-import SearchBar     from './components/search_bar';
-import SearchResults from './components/search_results';
+import Home from './components/home';
+import Watch from './components/watch';
 
 const API_KEY = 'AIzaSyBeimXtjgzfQcogY-fP8_CHPybmLpFaieo';
 
@@ -12,7 +13,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      videos: []
+      videos: [],
+      selectedVideo: null,
     };
     this.search = this.search.bind(this);
     this.search('');
@@ -29,10 +31,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <SearchBar search={this.search} />
-        <SearchResults videos={this.state.videos} />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Switch>
+            <Route path="/"      
+              render={
+                (props) => 
+                  <Home search={this.search} videos={this.state.videos} />
+              }
+            />
+            <Route path="/watch" component={Watch} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }

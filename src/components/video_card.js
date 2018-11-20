@@ -4,9 +4,11 @@ const VideoCard = ({video}) => {
   const imageUrl = video.snippet.thumbnails.default.url;
   return (
     <li className="video-card">
-      <h2>{video.snippet.title}</h2>
       <img src={imageUrl} alt="" />
-      <span>{video.snippet.description}</span>
+      <div>
+        <h3>{video.snippet.title}</h3>
+        <span>{video.snippet.description}</span>
+      </div>
     </li>
   );
 };

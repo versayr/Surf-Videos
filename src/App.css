@@ -11,9 +11,10 @@
 
 .video-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding: 10px;
 }
 
 .video-card img {
-  max-width: 64px;
+  margin-right: 10px;
 }
