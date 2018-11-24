@@ -17,15 +17,21 @@ class App extends Component {
       selectedVideo: null,
     };
     this.search = this.search.bind(this);
+    this.videoSelect = this.videoSelect.bind(this);
     this.search('');
   }
 
   search(searchTerm) {
-    console.log(searchTerm);
     YTSearch({key: API_KEY, term: `surf ${searchTerm}`}, (videos) => {
       this.setState({
         videos: videos
       });
+    });
+  }
+
+  videoSelect(video) {
+    this.setState({
+      selectedVideo: video
     });
   }
 
@@ -34,13 +40,22 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Switch>
+            <Route path="/watch" 
+              render={
+                (props) =>
+                  <Watch video={this.state.selectedVideo} />
+              }
+            />
             <Route path="/"      
               render={
                 (props) => 
-                  <Home search={this.search} videos={this.state.videos} />
+                  <Home 
+                    search={this.search} 
+                    videos={this.state.videos} 
+                    videoSelect={this.videoSelect}
+                  />
               }
             />
-            <Route path="/watch" component={Watch} />
           </Switch>
         </div>
       </BrowserRouter>

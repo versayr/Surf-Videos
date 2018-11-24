@@ -6,7 +6,9 @@ const SearchResults = (props) => {
   const videoItems = props.videos.map((video) => {
     return <VideoCard
       key={video.etag}
-      video={video} />;
+      video={video} 
+      videoSelect={props.videoSelect}
+      />;
   });
 
   return (

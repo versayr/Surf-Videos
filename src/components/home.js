@@ -6,7 +6,10 @@ const Home = (props) => {
   return (
     <div>
       <SearchBar search={props.search} />
-      <SearchResults videos={props.videos} />
+      <SearchResults 
+        videos={props.videos} 
+        videoSelect={props.videoSelect}
+      />
     </div>
   );
 };
